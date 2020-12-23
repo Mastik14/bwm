@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'bwm-header',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  public customNumber = 213799;
+  @Input('isAuthenticated') isAuthenticated = false;
+  @Input('username') username = '';
+  @Input('logout') logout = () => {};
 }
